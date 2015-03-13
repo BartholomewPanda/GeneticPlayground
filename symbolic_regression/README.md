@@ -11,7 +11,7 @@ f(x) = a + b.x + c.x^2 + d.x^3 + e.x^4 + f.x^5
 How can I tune the algorithm?
 ==============================
 
-I'm too lazy to use config file. You can tuned the algorithm by changing the
+I'm too lazy to use config file. You can tune the algorithm by changing the
 parameters in the file "genetic.ml".
 
 Some graphics
