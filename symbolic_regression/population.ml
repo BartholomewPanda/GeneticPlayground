@@ -29,11 +29,3 @@ let next breeding p =
     Array.sort Chromosome.cmp p.genome;
     {genome = Array.of_list (p.genome.(0) :: (make 0 [])); size = p.size}
 
-let debug_display fitness display p =
-    Array.sort Chromosome.cmp p.genome;
-    let best = p.genome.(0) in
-    let worst = p.genome.(p.size - 1) in
-    (*Printf.printf "%d;%f;%f\n" i best.fitness w.fitness;*)
-    Chromosome.debug_display best;
-    Chromosome.debug_display worst
-
