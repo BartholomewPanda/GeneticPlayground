@@ -21,7 +21,7 @@ The polynomial function's graph:
 ![the graph of function]
 (https://github.com/BartholomewPanda/GeneticPlayground/raw/master/symbolic_regression/img/f.jpg)
 
-The graph of fitness:
+The graph of fitness (log scale):
 ![the graph of fitness]
 (https://github.com/BartholomewPanda/GeneticPlayground/raw/master/symbolic_regression/img/fitness.jpg)
 
