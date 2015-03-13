@@ -8,7 +8,7 @@ goal is to find the coefficients (a, b, c, d, e, f) of this polynomial function:
 f(x) = a + b.x + c.x^2 + d.x^3 + e.x^4 + f.x^5
 ```
 
-How I can tuned the algorithm?
+How can I tune the algorithm?
 ==============================
 
 I'm too lazy to use config file. You can tuned the algorithm by changing the
