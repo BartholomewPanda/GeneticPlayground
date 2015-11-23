@@ -25,5 +25,5 @@ Example
 =======
 
 ![a simple example on env/gamma.env]
-(https://github.com/BartholomewPanda/GeneticPlayground/raw/master/crytanalysis/img/example.gif)
+(https://raw.githubusercontent.com/BartholomewPanda/GeneticPlayground/master/cryptanalysis/img/example.gif)
 
