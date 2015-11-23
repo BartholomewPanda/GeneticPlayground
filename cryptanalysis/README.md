@@ -24,6 +24,8 @@ python ./genetic.py 12 enc/gamma.enc 35
 Example
 =======
 
+Here is a simple example on the file env/gamma.env:
+
 ![a simple example on env/gamma.env]
 (https://raw.githubusercontent.com/BartholomewPanda/GeneticPlayground/master/cryptanalysis/img/example.gif)
 
