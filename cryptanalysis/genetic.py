@@ -54,8 +54,7 @@ class Individual:
 
 def next(pop):
     pos = int(len(pop) / 2)
-    pop = sorted(pop, key=lambda x: x.fitness)
-    pop = pop[pos:]
+    pop = sorted(pop, key=lambda x: x.fitness)[pos:]
     best = pop[-1]
     i = 0
     while i + 1 < pos:
