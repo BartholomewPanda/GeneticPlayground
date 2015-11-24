@@ -23,7 +23,7 @@ class Individual:
         self.compute_fitness()
 
     def __str__(self):
-        return '%s [fitness = %d]' % (''.join(self._genome), self._fitness)
+        return '%s [size = %d, fitness = %d]' % (''.join(self._genome), self._size, self._fitness)
 
     @property
     def genome(self):
@@ -33,12 +33,17 @@ class Individual:
     def fitness(self):
         return self._fitness
 
+    @property
+    def size(self):
+        return self._size
+
     def crossover(self, other):
-        point = random.randint(0, self._size - 1)
-        child1_genome = self._genome[:point] + other.genome[point:]
-        child2_genome = other.genome[:point] + self._genome[point:]
-        child1 = Individual(self._size, self._cipher, child1_genome, self._mutation_rate)
-        child2 = Individual(self._size, self._cipher, child2_genome, self._mutation_rate)
+        point1 = random.randint(0, self._size - 1)
+        point2 = random.randint(0, other.size - 1)
+        child1_genome = self._genome[:point1] + other.genome[point1:]
+        child2_genome = other.genome[:point2] + self._genome[point2:]
+        child1 = Individual(len(child1_genome), self._cipher, child1_genome, self._mutation_rate)
+        child2 = Individual(len(child2_genome), self._cipher, child2_genome, self._mutation_rate)
         return child1, child2
 
     def mutation(self):
@@ -64,15 +69,16 @@ def next(pop):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 4:
-        print('usage: %s key_size path nb_turn' % sys.argv[0])
+    if len(sys.argv) != 5:
+        print('usage: %s min_key_size max_key_size path nb_turn' % sys.argv[0])
         sys.exit(1)
-    key_size = int(sys.argv[1])
-    path = sys.argv[2]
-    nb_turn = int(sys.argv[3])
+    min_key = int(sys.argv[1])
+    max_key = int(sys.argv[2])
+    path = sys.argv[3]
+    nb_turn = int(sys.argv[4])
     with open(path) as f:
         cipher = f.read()
-    pop = [Individual(key_size, cipher, mutation_rate=0.4) for _ in range(400)]
+    pop = [Individual(random.randint(min_key, max_key), cipher, mutation_rate=0.4) for _ in range(400)]
     for i in range(nb_turn):
         best, pop = next(pop)
         os.system('clear')
