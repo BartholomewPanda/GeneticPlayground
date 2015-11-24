@@ -50,7 +50,7 @@ class Individual:
 
     def compute_fitness(self):
         plain = crypt.decrypt(''.join(self._genome), self._cipher)
-        self._fitness = plain.count('e')
+        self._fitness = plain.count('e') + plain.count('s')
         return self._fitness
 
 
