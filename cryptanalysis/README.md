@@ -4,22 +4,30 @@ Description
 Here is a simple proof of concept of a genetic algorithm application to the Vigenère cryptanalysis.
 This one is able to find the key of a cryptogram.
 
+
 How to use
 ==========
 
+The genetic script allows to find the key.
+
+Usage:
 ```
-python ./genetic.py key_size path nb_turn
+python ./genetic.py min_key_size max_key_size path nb_turn
 ```
 
-- key_size is the size of the key
+- min_key_size and may_key_size are a range (min_key_size <= key lenght <= max_key_size)
 - path is the path to the file that contains the cryptogram
 - nb_turn is the number of iteration for the genetic algorithm
 
 Some examples are available in the 'enc' directory. Example:
 
 ```
-python ./genetic.py 12 enc/gamma.enc 35
+#in this example, we know that the key lenght is 12
+python ./genetic.py 12 12 enc/gamma.enc 35
+#in this example, we suppose that the key lenght is in the range [5, 10]
+python ./genetic.py 5 10 enc/droit.enc 35
 ```
+
 
 Example
 =======
