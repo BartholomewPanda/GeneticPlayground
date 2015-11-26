@@ -77,7 +77,7 @@ if __name__ == '__main__':
     path = sys.argv[3]
     nb_turn = int(sys.argv[4])
     with open(path) as f:
-        cipher = f.read()
+        cipher = f.read().lower()
     pop = [Individual(random.randint(min_key, max_key), cipher, mutation_rate=0.4) for _ in range(400)]
     for i in range(nb_turn):
         best, pop = next(pop)
