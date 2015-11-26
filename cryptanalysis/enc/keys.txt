@@ -1,4 +1,2 @@
 ./gamma.enc     evilpassword
-./droit.enc     ysytczu
-./corbeau.enc   edgarallanpoe
 ./manifest      voiciunetreslongueclefpermettantdetesterlagenetique
