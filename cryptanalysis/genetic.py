@@ -38,7 +38,7 @@ class Individual:
         return self._size
 
     def crossover(self, other):
-        point = random.randint(0, self._size - 1)
+        point = random.randint(0, min(self._size, other.size) - 1)
         child1_genome = self._genome[:point] + other.genome[point:]
         child2_genome = other.genome[:point] + self._genome[point:]
         child1 = Individual(len(child1_genome), self._cipher, child1_genome, self._mutation_rate)
