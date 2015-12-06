@@ -4,6 +4,8 @@ Description
 Here is a simple proof of concept of a genetic algorithm application to the Vigenère cryptanalysis.
 This one is able to find the key of a cryptogram.
 
+A simple description of this POC is available on my blog: http://blog.bartholomew.fr/cryptanalysis-with-genetic-algorithms/
+
 
 How to use
 ==========
